@@ -20,6 +20,10 @@ const userSchema = new Schema(
     passwordHash: {
       type: String,
       required: [true, "Password is required."]
+    },
+    imgUrl: {
+      type: String,
+      default: "https://cdn3.iconfinder.com/data/icons/vector-icons-6/96/256-1024.png"
     }
   },
   {
