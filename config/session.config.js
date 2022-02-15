@@ -1,3 +1,5 @@
+
+const MONGO_URI =`mongodb+srv://${process.env.MG_USERNAME}:${process.env.MG_PWD}@cluster0.xkqko.mongodb.net/CLASS-authentication-ex?retryWrites=true&w=majority`;
 // config/session.config.js
 
 // require session
@@ -27,7 +29,7 @@ module.exports = (app) => {
         maxAge: 60000 // 60 * 1000 ms === 1 min
       }, // ADDED code below !!!
       store: MongoStore.create({
-        mongoUrl: process.env.MONGODB_URI || "mongodb://localhost/basic-auth"
+        mongoUrl: MONGO_URI
 
         // ttl => time to live
         // ttl: 60 * 60 * 24 // 60sec * 60min * 24h => 1 day
